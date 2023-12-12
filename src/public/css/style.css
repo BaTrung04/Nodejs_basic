@@ -55,3 +55,18 @@ button {
     padding: 7px 20px;
     margin: 10px;
 }
+
+.table-container {
+    margin: 20px;
+
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600px;
+    padding-top: 10px;
+}
+
+table {
+    border: 1px solid #ccc;
+}

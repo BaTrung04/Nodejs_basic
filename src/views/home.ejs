@@ -33,17 +33,17 @@
     </div>
     <div class="table-container">
 
-        <%= JSON.stringify(listUsers) %>
-            <div class="title">List Users</div>
-            <table>
-                <tr>
-                    <th>Id</th>
-                    <th>Email</th>
-                    <th>Name</th>
-                    <th>City</th>
-                    <th>Actions</th>
-                </tr>
-                <!-- <% for (let i=0; i < listUsers.length; i++) { %>
+        <!-- <%= JSON.stringify(listUsers) %> -->
+        <div class="title">List Users</div>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+            <!-- <% for (let i=0; i < listUsers.length; i++) { %>
                     <tr>
                         <td>
                             <%= listUsers[i].id %>
@@ -63,28 +63,28 @@
                         </td>
                     </tr>
                 <% } %> -->
-                <% listUsers.forEach(function (item) { %>
-                    <tr>
-                        <td>
-                            <%= item.id %>
-                        </td>
-                        <td>
-                            <%= item.email %>
-                        </td>
-                        <td>
-                            <%= item.name %>
-                        </td>
-                        <td>
-                            <%= item.city %>
-                        </td>
-                        <td>
-                            <button>Edit</button>
-                            <button>Delete</button>
-                        </td>
-                    </tr>
-                    <% }) %>
+            <% listUsers.forEach(function (item) { %>
+                <tr>
+                    <td>
+                        <%= item.id %>
+                    </td>
+                    <td>
+                        <%= item.email %>
+                    </td>
+                    <td>
+                        <%= item.name %>
+                    </td>
+                    <td>
+                        <%= item.city %>
+                    </td>
+                    <td>
+                        <a href="/update/<%= item.id %>">Edit</a>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <% }) %>
 
-            </table>
+        </table>
     </div>
 
 </body>

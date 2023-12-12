@@ -70,3 +70,7 @@ button {
 table {
     border: 1px solid #ccc;
 }
+
+.d-none {
+    display: none;
+}

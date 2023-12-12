@@ -20,7 +20,6 @@ const getCreatePage = (req, res) => {
 const getUpdatePage = async (req, res) => {
     const userId = req.params.id;
     //console.log(">>>>req.params::", req.params, userId)
-
     let user = await getUserById(userId);
 
     res.render('edit.ejs', { userEdit: user }) // x <- y
@@ -62,12 +61,26 @@ const postUpdateUsers = async (req, res) => {
     res.redirect('/');
 }
 
+const postDeleteUsers = async (req, res) => {
+    const userId = req.params.id;
+    //console.log(">>>>req.params::", req.params, userId)
+    let user = await getUserById(userId);
+    res.render('delete.ejs', { userEdit: user })
+    // res.send('Delete user success !')
+
+}
+
+const postHandleDeleteUsers = async (req, res) => {
+    res.send('Delete okeee !')
+
+}
+
 
 
 
 module.exports = {
     getHomepage, getCreatePage, getUpdatePage,
-    getABC, postUpdateUsers,
-    get123,
+    getABC, postUpdateUsers, postDeleteUsers,
+    get123, postHandleDeleteUsers,
     postCreateUsers
 }
